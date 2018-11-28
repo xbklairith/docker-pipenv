@@ -13,4 +13,4 @@ WORKDIR /app
 
 ONBUILD COPY Pipfile Pipfile
 ONBUILD COPY COPY Pipfile.lock Pipfile.lock
-RUN set -ex && pipenv install --deploy --system
+ONBUILD RUN set -ex && pipenv install --deploy --system
