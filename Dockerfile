@@ -10,7 +10,3 @@ ENV LANG C.UTF-8
 RUN set -ex && mkdir /app
 WORKDIR /app
 
-
-ONBUILD COPY Pipfile Pipfile
-ONBUILD COPY Pipfile.lock Pipfile.lock
-ONBUILD RUN set -ex && pipenv install --deploy --system
